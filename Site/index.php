@@ -69,7 +69,7 @@
                 <a class="hiddenanchor" id="tologin"></a>
                 <div id="wrapper">
                     <div id="login" class="animate form">
-                        <form  action="connexion.php" autocomplete="on" method="POST">
+                        <form  action="login.php" autocomplete="on" method="POST">
                             <h1>Log in</h1>
                             <p>
                                 <label for="username" class="uname" data-icon="u" > Your email or username </label>
@@ -94,23 +94,23 @@
                     </div>
 
                     <div id="register" class="animate form">
-                        <form  action="connexion.php" autocomplete="on" method="POST">
+                        <form  action="register.php" autocomplete="on" method="POST">
                             <h1> Sign up </h1>
                             <p>
-                                <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                <label for="username" class="uname" data-icon="u">Your username</label>
+                                <input id="username" name="username" required="required" type="text" placeholder="mysuperusername690" />
                             </p>
                             <p>
-                                <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-                                <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                                <label for="email" class="youmail" data-icon="e" > Your email</label>
+                                <input id="email" name="email" required="required" type="email" placeholder="mysupermail@mail.com"/>
                             </p>
                             <p>
-                                <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                <label for="password" class="youpasswd" data-icon="p">Your password </label>
+                                <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
                             </p>
                             <p>
-                                <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                                <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                <label for="password_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                                <input id="password_confirm" name="password_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
                             </p>
                             <p class="signin button">
                                 <input type="submit" value="Sign up"/>
