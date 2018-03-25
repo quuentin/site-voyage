@@ -8,7 +8,7 @@ if (!empty($_POST['username'])) {
         $message = "<h2>Vous êtes bien connecté.";
         echo $message;
     } else {
-        $message .= "<h3>Mauvais identifiants ou mot de passe.";
+        $message  .= "<h3>Mauvais identifiants ou mot de passe.";
         echo $message;
     }
 
@@ -26,7 +26,20 @@ if (!empty($_POST['usernamesignup'])) {
     $username = $_POST['usernamesignup'];
     $email = $_POST['emailsignup'];
 
-    $req = $bdd->query('SELECT emailsignup, COUNT (id)  FROM validation');
+    if ($stmt = $dbh->prepare("SELECT COUNT (id) FROM validation where emailsignup=:username")) {
+ 
+        /* Lecture des marqueurs */
+        $stmt->bindParam(':username', $username);
+
+        /* Exécution de la requête */
+        $stmt->execute();
+     
+        printf();
+     
+        /* Fermeture du traitement */
+        $stmt->close();
+    }
+
     $donnees = $req->fetch();
 
     if ($donnees == 0) {
